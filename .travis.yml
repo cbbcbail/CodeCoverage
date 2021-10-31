@@ -1,17 +1,18 @@
-sudo: false
-language: node_js
-node_js:
-- '8'
+---
+before_install:
+  - "npm update"
 branches:
   only:
-  - master
+    - master
 cache:
   directories:
-  - node_modules
-before_install:
-- npm update
+    - node_modules
 install:
-- npm install
+  - "npm install"
+language: node_js
+node_js:
+  - "8"
 script:
-- npm test
-- npm run coveralls
+  - "npm test"
+  - "npm run coveralls"
+sudo: false
