@@ -1,15 +1,8 @@
----
-before_install:
-  - "npm update"
-cache:
-  directories:
-    - node_modules
-install:
-  - "npm install"
+sudo: false
 language: node_js
 node_js:
-  - "8"
+  - node
+install:
+  - npm install
 script:
-  - "npm test"
-  - "npm run coveralls"
-sudo: false
+  - npm test
