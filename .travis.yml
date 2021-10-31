@@ -1,9 +1,6 @@
 ---
 before_install:
   - "npm update"
-branches:
-  only:
-    - master
 cache:
   directories:
     - node_modules
